@@ -1,3 +1,9 @@
+/**
+ * @author 0xADev
+ * @description Main arm2code file, ARM_64 not supported
+ */
+
+
 const argumentProcessor = require('./lib/processor_argument.js').ArgumentProcessor;
 const instructionProcessor = require('./lib/processor_instruction.js').InstrProcessor;
 const armRegisters =  require('./lib/arm_instructions.js').instructions;
