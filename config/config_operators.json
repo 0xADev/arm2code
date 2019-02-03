@@ -1,0 +1,12 @@
+{
+    "OPERATOR_EQUAL": " = ",
+    "OPERATOR_ADD": " + ",
+    "OPERATOR_SUB": " - ",
+
+    "ARM_OPERATOR_PREINDEXED" : "!",
+    "ARM_OPERATOR_VALUE" : "#",
+    
+    "KEYWORD_STACK" : "stack",
+    "KEYWORD_VAR" : ""
+
+}

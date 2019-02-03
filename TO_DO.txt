@@ -1,0 +1,44 @@
+List Created By PicPat
+
+
+Requesting functions to fadyi:
+
+- Convert instruction in end of ARM script, depending instruction  to "return"
+    Example:
+
+    loc_myFunction
+        mov r0, #10
+        bx lr 
+
+    is same :
+
+    loc_myFunction(){
+        return 10;
+    }
+
+
+- Pseudocode for CMP instructions, depending next instruction,
+    Example:
+
+    cmp   r0, #5   ; if (a == 5)
+    moveq r0, #10   ; because 'eq' is 'is equal'
+    bleq  fn       ;   fn(10)
+
+
+    cmp  r0, #0    ; if (x <= 0),    because 'le' of movle is same 'less or equal'
+    movle r0, #0   ;   x = 0;
+    movgt r0, #1   ; else x = 1;
+    
+    
+   - Detect end of instruction
+   
+loc_82FAB:
+   
+        cmp   r0, #5   ; if (a == 5)
+        moveq r0, #10   ; because 'eq' is 'is equal'
+        bleq  fn       ;   fn(10) ;<------------ end of label/function
+ loc_82FAC:
+   
+        cmp   r0, #5   ; if (a == 5)
+        moveq r0, #10   ; because 'eq' is 'is equal'
+        bleq  fn       ;   fn(10) ;<------------ end of label/function
